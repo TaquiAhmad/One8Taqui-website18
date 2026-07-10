@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #000000, #0a0a2a, #1a0033, #000000);
+  background-size: 400% 400%;
+  animation: bgAnimation 15s ease infinite;
+  color: white;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
