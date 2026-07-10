@@ -1,57 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>One8 Taqui</title>
-<style>
 
-.top-section{
-    background:black;
-    padding-top:80px;
-    padding-bottom:40px;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-.bottom-section{
-    background:url('background.png');
+body{
+    background:black;
+    color:white;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url("banner.jpg");
     background-size:cover;
     background-position:center;
-    padding:40px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
-img{
-
-  width:150px;
-  border-radius:50%;
+.logo{
+    width:140px;
+    border-radius:50%;
+    border:3px solid #ff0000;
+    margin-bottom:20px;
 }
+
 h1{
-  color:#ff0000;
+    color:#ff3b3b;
+    font-size:42px;
+    margin-bottom:10px;
+    text-shadow:0 0 15px red;
 }
-button{
-  padding:12px 25px;
-  background:red;
-  color:white;
-  border:none;
-  border-radius:10px;
-  font-size:18px;
+
+p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#ff0000;
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:40px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#cc0000;
+}
+
+.social{
+    margin-top:30px;
+}
+
+.social a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+}
+
+.footer{
+    background:#111;
+    text-align:center;
+    padding:20px;
 }
 </style>
 </head>
+
 <body>
-    <div class="top-section">
 
-<img src="logo.png" alt="One8 Taqui Logo">
-<h1>One8 Taqui</h1>
-<p>Welcome to my official website.</p>
-<p>Founder: Taqui Ahmad</p>
+<div class="hero">
 
-<button onclick="window.location.href='https://www.youtube.com/@One8Taqui'">
-Subscribe My YouTube Channel
-</button>
-        </div>
+    <img src="logo.png" class="logo">
 
-<div class="bottom-section">
-    <!-- Latest Videos aur social media wala code yahan paste karo -->
+    <h1>One8 Taqui</h1>
+
+    <p>Founder : Taqui Ahmad</p>
+
+    <a class="btn"
+       href="https://youtube.com/@One8Taqui"
+       target="_blank">
+       🔔 Subscribe My YouTube Channel
+    </a>
+
+    <div class="social">
+        <a href="https://instagram.com/zxlr09">📷 Instagram</a>
+        <a href="https://youtube.com/@One8Taqui">▶ YouTube</a>
+    </div>
+
 </div>
 
+<div class="footer">
+    © 2026 One8 Taqui | All Rights Reserved
+</div>
 
 </body>
 </html>
