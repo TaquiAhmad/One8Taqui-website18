@@ -107,3 +107,28 @@ width:380px;
 border-radius:20px;
 box-shadow:0 0 40px #00c3ff;
 }
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 50px;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .hero-right img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    display: none;
+  }
+}
