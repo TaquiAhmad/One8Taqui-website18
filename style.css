@@ -2,13 +2,13 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#050816;
+font-family:'Poppins',sans-serif;
+background:#08111f;
 color:#fff;
-overflow-x:hidden;
 }
 
 header{
@@ -17,39 +17,30 @@ top:0;
 left:0;
 width:100%;
 padding:18px 8%;
+background:#0d1b2a;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,.35);
-backdrop-filter:blur(12px);
-z-index:999;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.logo img{
-width:55px;
-height:55px;
-border-radius:50%;
-border:2px solid #00bfff;
-box-shadow:0 0 20px #00bfff;
-}
-
-.logo h2{
+font-size:28px;
+font-weight:800;
 color:#00c3ff;
-font-weight:700;
+}
+
+.logo span{
+color:#ffffff;
 }
 
 nav a{
-color:white;
+color:#fff;
 text-decoration:none;
 margin-left:25px;
+font-weight:600;
 transition:.3s;
-font-weight:500;
 }
 
 nav a:hover{
@@ -61,136 +52,139 @@ min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:120px 8%;
-background:linear-gradient(135deg,#050816,#0b1f45);
+padding:120px 8% 60px;
+gap:40px;
 }
 
 .hero-left{
 max-width:600px;
 }
 
-.hero-left h1{
+.hero h1{
 font-size:60px;
 line-height:1.2;
+margin-bottom:20px;
 }
 
-.hero-left span{
+.hero h1 span{
 color:#00c3ff;
-text-shadow:0 0 25px #00c3ff;
 }
 
-.hero-left p{
-margin-top:20px;
+.hero p{
 font-size:20px;
-color:#d9d9d9;
+color:#d8d8d8;
+margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
 padding:15px 35px;
 background:#00c3ff;
 color:#000;
 text-decoration:none;
-border-radius:50px;
+border-radius:40px;
 font-weight:bold;
 transition:.3s;
 }
 
 .btn:hover{
 transform:scale(1.08);
-box-shadow:0 0 25px #00c3ff;
 }
 
 .hero-right img{
-width:380px;
+width:350px;
+max-width:100%;
 border-radius:20px;
-box-shadow:0 0 40px #00c3ff;
+box-shadow:0 0 35px #00c3ff;
 }
-@media (max-width: 768px) {
-  .hero {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-    padding: 120px 20px 50px;
-  }
-
-  .hero-left {
-    width: 100%;
-  }
-
-  .hero-right img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin-bottom: 20px;
-  }
-
-  nav {
-    display: none;
-  }
+.about,
+.quiz,
+.blog,
+.contact{
+padding:80px 8%;
+text-align:center;
 }
-.hero-right{
-    width:100%;
-    display:flex;
-    justify-content:center;
+
+.about h2,
+.quiz h2,
+.blog h2,
+.contact h2{
+font-size:40px;
+color:#00c3ff;
+margin-bottom:25px;
+}
+
+.about p,
+.quiz p,
+.blog p,
+.contact p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:20px;
+color:#ddd;
+}
+
+.card{
+background:#12263f;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,195,255,.2);
+max-width:700px;
+margin:auto;
+}
+
+.contact a,
+.footer-links a{
+color:#00c3ff;
+text-decoration:none;
+}
+
+footer{
+background:#06111d;
+padding:40px 8%;
+text-align:center;
+}
+
+.footer-links{
+margin:20px 0;
+}
+
+.footer-links a{
+margin:0 12px;
+}
+
+.copyright{
+color:#aaa;
+margin-top:15px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+margin:8px;
+display:inline-block;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:150px;
+}
+
+.hero h1{
+font-size:40px;
 }
 
 .hero-right img{
-    max-width:220px !important;
-    width:220px !important;
-    height:220px !important;
-    object-fit:cover;
-}
-.about{
-    padding:70px 20px;
-    text-align:center;
-    background:#081426;
+width:260px;
 }
 
-.about h2{
-    color:#00c3ff;
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-.about p{
-    max-width:700px;
-    margin:15px auto;
-    color:#ffffff;
-    font-size:18px;
-    line-height:1.8;
-}
-
-.about strong{
-    color:#00c3ff;
-}
-.contact{
-  padding:70px 20px;
-  text-align:center;
-  background:#06152d;
-}
-
-.contact h2{
-  color:#00c3ff;
-  font-size:40px;
-  margin-bottom:20px;
-}
-
-.contact p{
-  color:#ffffff;
-  font-size:18px;
-  margin:15px 0;
-}
-
-.contact a{
-  color:#00c3ff;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.contact a:hover{
-  text-decoration:underline;
-}
+  }
