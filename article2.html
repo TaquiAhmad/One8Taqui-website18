@@ -48,7 +48,7 @@ tr:nth-child(even){
 <div class="container">
 
 <h1>Countries and Their Capitals</h1>
-
+<input type="text" id="searchInput" onkeyup="searchCountry()" placeholder="Search country or capital...">
 <p>
 Knowing the capitals of countries is important for school exams, competitive exams, and general knowledge.
 </p>
@@ -269,6 +269,22 @@ Knowing the capitals of countries is important for school exams, competitive exa
 <tr><td>Zimbabwe</td><td>Harare</td></tr>
 </table>
 </div>
+<script>
+function searchCountry() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let table = document.querySelector("table");
+    let tr = table.getElementsByTagName("tr");
 
+    for (let i = 1; i < tr.length; i++) {
+        let txt = tr[i].textContent.toLowerCase();
+
+        if (txt.indexOf(input) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+</script>
 </body>
 </html>
