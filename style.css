@@ -132,7 +132,13 @@ box-shadow:0 0 20px rgba(0,195,255,.2);
 max-width:700px;
 margin:auto;
 }
-
+.card img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+    margin-bottom:20px;
+}
 .contact a,
 .footer-links a{
 color:#00c3ff;
