@@ -39,11 +39,22 @@ function loadQuestion() {
 }
 
 function checkAnswer(index) {
+  const buttons = answers.querySelectorAll("button");
+
+  buttons.forEach((button, i) => {
+    button.disabled = true;
+
+    if (i === questions[currentQuestion].correct) {
+      button.style.backgroundColor = "green";
+      button.style.color = "white";
+    } else if (i === index) {
+      button.style.backgroundColor = "red";
+      button.style.color = "white";
+    }
+  });
+
   if (index === questions[currentQuestion].correct) {
-    alert("✅ Correct!");
     score++;
-  } else {
-    alert("❌ Wrong!");
   }
 }
 
