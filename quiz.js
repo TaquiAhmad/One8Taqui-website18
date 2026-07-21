@@ -52,22 +52,25 @@ function checkAnswer(index) {
       button.style.color = "white";
     }
   });
-
-  if (index === questions[currentQuestion].correct) {
+if (index === questions[currentQuestion].correct) {
     score++;
-  }
-}
-
-nextBtn.onclick = function () {
+    
+ setTimeout(() => {
   currentQuestion++;
 
   if (currentQuestion < questions.length) {
     loadQuestion();
   } else {
-    question.textContent = `Quiz Finished! Your Score: ${score}/${questions.length}`;
+    question.textContent = `Quiz Finished! Score: ${score}/${questions.length}`;
     answers.innerHTML = "";
     nextBtn.style.display = "none";
+  
+}, 1000);
   }
-};
+}
+
+
+
+  
 
 loadQuestion();
