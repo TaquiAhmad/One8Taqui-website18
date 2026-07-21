@@ -1,0 +1,62 @@
+const questions = [
+  {
+    question: "What is the capital of India?",
+    answers: ["Mumbai", "New Delhi", "Kolkata", "Chennai"],
+    correct: 1
+  },
+  {
+    question: "Which planet is known as the Red Planet?",
+    answers: ["Earth", "Mars", "Jupiter", "Venus"],
+    correct: 1
+  },
+  {
+    question: "Who is known as the Father of the Nation of India?",
+    answers: ["Mahatma Gandhi", "Jawaharlal Nehru", "B. R. Ambedkar", "Subhas Chandra Bose"],
+    correct: 0
+  }
+];
+const question = document.getElementById("question");
+const answers = document.getElementById("answers");
+const nextBtn = document.getElementById("next-btn");
+
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuestion() {
+  const q = questions[currentQuestion];
+  question.textContent = q.question;
+  answers.innerHTML = "";
+
+  q.answers.forEach((answer, index) => {
+    const button = document.createElement("button");
+    button.textContent = answer;
+    button.className = "btn";
+    button.onclick = () => checkAnswer(index);
+    answers.appendChild(button);
+    answers.appendChild(document.createElement("br"));
+    answers.appendChild(document.createElement("br"));
+  });
+}
+
+function checkAnswer(index) {
+  if (index === questions[currentQuestion].correct) {
+    alert("✅ Correct!");
+    score++;
+  } else {
+    alert("❌ Wrong!");
+  }
+}
+
+nextBtn.onclick = function () {
+  currentQuestion++;
+
+  if (currentQuestion < questions.length) {
+    loadQuestion();
+  } else {
+    question.textContent = `Quiz Finished! Your Score: ${score}/${questions.length}`;
+    answers.innerHTML = "";
+    nextBtn.style.display = "none";
+  }
+};
+
+loadQuestion();
