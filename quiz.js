@@ -17,8 +17,7 @@ const questions = [
 ];
 const question = document.getElementById("question");
 const answers = document.getElementById("answers");
-const nextBtn = document.getElementById("next-btn");
-
+const nextBtn = document.getElementById("nextBtn");
 let currentQuestion = 0;
 let score = 0;
 
