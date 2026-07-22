@@ -36,7 +36,6 @@ function loadQuestion() {
     answers.appendChild(document.createElement("br"));
   });
 }
-
 function checkAnswer(index) {
   const buttons = answers.querySelectorAll("button");
 
@@ -51,10 +50,8 @@ function checkAnswer(index) {
       button.style.color = "white";
     }
   });
-if (index === questions[currentQuestion].correct) {
-    score++;
-    
-   if (index === questions[currentQuestion].correct) {
+
+  if (index === questions[currentQuestion].correct) {
     score++;
   }
 
