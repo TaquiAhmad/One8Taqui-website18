@@ -248,7 +248,181 @@ const questions = [
   question: "Which vitamin is produced by sunlight?",
   answers: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
   correct: 3
-            }
+            },
+{
+  question: "What is the capital of Italy?",
+  answers: ["Milan", "Rome", "Venice", "Naples"],
+  correct: 1
+},
+{
+  question: "Which is the largest planet in the Solar System?",
+  answers: ["Earth", "Saturn", "Jupiter", "Neptune"],
+  correct: 2
+},
+{
+  question: "Which country is known as the Land of the Rising Sun?",
+  answers: ["China", "Japan", "Thailand", "South Korea"],
+  correct: 1
+},
+{
+  question: "How many colours are there in a rainbow?",
+  answers: ["5", "6", "7", "8"],
+  correct: 2
+},
+{
+  question: "Which is the national tree of India?",
+  answers: ["Neem", "Banyan", "Peepal", "Mango"],
+  correct: 1
+},
+{
+  question: "What is the capital of Russia?",
+  answers: ["Moscow", "Saint Petersburg", "Kazan", "Sochi"],
+  correct: 0
+},
+{
+  question: "Which is the hardest natural substance?",
+  answers: ["Gold", "Iron", "Diamond", "Silver"],
+  correct: 2
+},
+{
+  question: "Who is known as the Missile Man of India?",
+  answers: ["A. P. J. Abdul Kalam", "Vikram Sarabhai", "Homi Bhabha", "C. V. Raman"],
+  correct: 0
+},
+{
+  question: "Which is the largest bird in the world?",
+  answers: ["Eagle", "Ostrich", "Emu", "Peacock"],
+  correct: 1
+},
+{
+  question: "Which river is known as the Ganga of South India?",
+  answers: ["Godavari", "Krishna", "Kaveri", "Narmada"],
+  correct: 0
+},
+{
+  question: "What is the capital of Nepal?",
+  answers: ["Pokhara", "Kathmandu", "Lalitpur", "Biratnagar"],
+  correct: 1
+},
+{
+  question: "Which is the smallest ocean in the world?",
+  answers: ["Indian", "Atlantic", "Arctic", "Pacific"],
+  correct: 2
+},
+{
+  question: "Which country gifted the Statue of Liberty to the USA?",
+  answers: ["France", "England", "Germany", "Canada"],
+  correct: 0
+},
+{
+  question: "Which is the largest volcano in the world?",
+  answers: ["Mount Fuji", "Mauna Loa", "Mount Etna", "Kilimanjaro"],
+  correct: 1
+},
+{
+  question: "Who discovered penicillin?",
+  answers: ["Alexander Fleming", "Louis Pasteur", "Edward Jenner", "Joseph Lister"],
+  correct: 0
+},
+{
+  question: "Which is the deepest ocean in the world?",
+  answers: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+  correct: 2
+},
+{
+  question: "Which is the national game of Bangladesh?",
+  answers: ["Football", "Kabaddi", "Cricket", "Hockey"],
+  correct: 1
+},
+{
+  question: "What is the capital of Sri Lanka?",
+  answers: ["Colombo", "Kandy", "Galle", "Jaffna"],
+  correct: 0
+},
+{
+  question: "Which instrument is used to measure temperature?",
+  answers: ["Barometer", "Thermometer", "Hygrometer", "Altimeter"],
+  correct: 1
+},
+{
+  question: "Which is the largest democracy in the world?",
+  answers: ["USA", "India", "Brazil", "Indonesia"],
+  correct: 1
+},
+{
+  question: "Which is the largest forest in the world?",
+  answers: ["Amazon Rainforest", "Congo Forest", "Sundarbans", "Taiga"],
+  correct: 0
+},
+{
+  question: "What is the capital of South Korea?",
+  answers: ["Seoul", "Busan", "Incheon", "Daegu"],
+  correct: 0
+},
+{
+  question: "Which is the fastest aquatic animal?",
+  answers: ["Shark", "Sailfish", "Dolphin", "Whale"],
+  correct: 1
+},
+{
+  question: "Who invented the World Wide Web?",
+  answers: ["Bill Gates", "Tim Berners-Lee", "Steve Jobs", "Larry Page"],
+  correct: 1
+},{
+  question: "Which is the national flower of India?",
+  answers: ["Rose", "Lotus", "Sunflower", "Jasmine"],
+  correct: 1
+},
+{
+  question: "Which metal is liquid at room temperature?",
+  answers: ["Gold", "Silver", "Mercury", "Iron"],
+  correct: 2
+},
+{
+  question: "Which is the largest country in the world by area?",
+  answers: ["Canada", "Russia", "China", "USA"],
+  correct: 1
+},
+{
+  question: "What is the capital of France?",
+  answers: ["Paris", "London", "Rome", "Berlin"],
+  correct: 0
+},
+{
+  question: "Which is the smallest planet in our solar system?",
+  answers: ["Mercury", "Mars", "Earth", "Venus"],
+  correct: 0
+},
+{
+  question: "Who is known as the Father of the Nation in India?",
+  answers: ["Mahatma Gandhi", "Nehru", "Sardar Patel", "Ambedkar"],
+  correct: 0
+},
+{
+  question: "Which is the national animal of India?",
+  answers: ["Lion", "Tiger", "Elephant", "Leopard"],
+  correct: 1
+},
+{
+  question: "Which is the fastest land animal?",
+  answers: ["Lion", "Cheetah", "Tiger", "Horse"],
+  correct: 1
+},
+{
+  question: "Which is the capital of China?",
+  answers: ["Shanghai", "Beijing", "Hong Kong", "Wuhan"],
+  correct: 1
+},
+{
+  question: "Which is the largest continent in the world?",
+  answers: ["Africa", "Europe", "Asia", "Australia"],
+  correct: 2
+},
+{
+  question: "Which is the national bird of India?",
+  answers: ["Peacock", "Parrot", "Sparrow", "Eagle"],
+  correct: 0
+}
 ];
 
 const question = document.getElementById("question");
