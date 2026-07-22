@@ -8,7 +8,21 @@
 </head>
 <body>
 
-  <div class="quiz-container">
+<div class="quiz-container">
+
+  <div id="quizStart">
+    <h1>GK Quiz</h1>
+    <h2>Select Number of Questions</h2>
+
+    <button class="btn" onclick="startQuiz(10)">10 Questions</button>
+    <button class="btn" onclick="startQuiz(15)">15 Questions</button>
+    <button class="btn" onclick="startQuiz(20)">20 Questions</button>
+    <button class="btn" onclick="startQuiz(50)">50 Questions</button>
+    <button class="btn" onclick="startQuiz(100)">100 Questions</button>
+  </div>
+
+
+  <div id="quizBox" style="display:none;">
     <h1>GK Quiz</h1>
 
     <h2 id="question">Question will appear here</h2>
@@ -18,7 +32,4 @@
     <button id="nextBtn" class="btn" style="display:none;">Next</button>
   </div>
 
-  <script src="quiz.js"></script>
-
-</body>
-</html>
+</div>
