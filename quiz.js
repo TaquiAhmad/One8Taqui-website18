@@ -54,22 +54,21 @@ function checkAnswer(index) {
 if (index === questions[currentQuestion].correct) {
     score++;
     
- setTimeout(() => {
-  currentQuestion++;
-
-  if (currentQuestion < questions.length) {
-    loadQuestion();
-  } else {
-    question.textContent = `Quiz Finished! Score: ${score}/${questions.length}`;
-    answers.innerHTML = "";
-    nextBtn.style.display = "none";
-  
-}, 1000);
+   if (index === questions[currentQuestion].correct) {
+    score++;
   }
+
+  setTimeout(() => {
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+      loadQuestion();
+    } else {
+      question.textContent = `Quiz Finished! Score: ${score}/${questions.length}`;
+      answers.innerHTML = "";
+      nextBtn.style.display = "none";
+    }
+  }, 1000);
 }
-
-
-
-  
 
 loadQuestion();
