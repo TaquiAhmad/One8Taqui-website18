@@ -477,3 +477,10 @@ footer{
   50% { transform: translateX(8px); }
   75% { transform: translateX(-8px); }
       }
+#timer {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+}
