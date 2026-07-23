@@ -431,9 +431,9 @@ const nextBtn = document.getElementById("nextBtn");
 
 let currentQuestion = 0;
 let score = 0;
-
+let quizQuestions = [];
 function loadQuestion() {
-  const q = questions[currentQuestion];
+  const q = quizQuestions[currentQuestion];
   question.textContent = q.question;
   answers.innerHTML = "";
   nextBtn.style.display = "none";
@@ -457,7 +457,7 @@ function checkAnswer(index) {
   buttons.forEach((button, i) => {
     button.disabled = true;
 
-    if (i === questions[currentQuestion].correct) {
+    if (i === quizquestions[currentQuestion].correct) {
       button.style.background = "green";
       button.style.color = "white";
     } else if (i === index) {
@@ -466,7 +466,7 @@ function checkAnswer(index) {
     }
   });
 
-  if (index === questions[currentQuestion].correct) {
+  if (index === quizquestions[currentQuestion].correct) {
     score++;
   }
 
@@ -475,14 +475,22 @@ function checkAnswer(index) {
 
 nextBtn.onclick = function () {
   currentQuestion++;
-
-  if (currentQuestion < questions.length) {
+if (currentQuestion < quizQuestions.length) {
+  
     loadQuestion();
   } else {
-    question.innerHTML = `🎉 Quiz Finished!<br>Score: ${score}/${questions.length}`;
-    answers.innerHTML = "";
-    nextBtn.style.display = "none";
+    question.innerHTML = `🎉 Quiz Finished!<br>Score: ${score}/${quizQuestions.length}`;
   }
 };
 
-loadQuestion();
+function startQuiz(number) {
+  quizQuestions = questions.slice(0, number);
+
+  currentQuestion = 0;
+  score = 0;
+
+  document.getElementById("quizStart").style.display = "none";
+  document.getElementById("quizBox").style.display = "block";
+
+  loadQuestion();
+}
