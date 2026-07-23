@@ -484,6 +484,7 @@ if (currentQuestion < quizQuestions.length) {
 };
 
 function startQuiz(number) {
+  alert("Button Working");
   quizQuestions = questions.slice(0, number);
 
   currentQuestion = 0;
