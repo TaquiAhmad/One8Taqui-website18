@@ -428,16 +428,50 @@ const questions = [
 const question = document.getElementById("question");
 const answers = document.getElementById("answers");
 const nextBtn = document.getElementById("nextBtn");
+const timer = document.getElementById("timer");
 
+let timeLeft = 15;
+let timerInterval;
 let currentQuestion = 0;
 let score = 0;
 let quizQuestions = [];
+function startTimer() {
+  clearInterval(timerInterval);
+
+  timeLeft = 15;
+  timer.textContent = "⏱️ Time Left: " + timeLeft + "s";
+  timer.style.color = "#333";
+
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    timer.textContent = "⏱️ Time Left: " + timeLeft + "s";
+
+    if (timeLeft <= 5) {
+      timer.style.color = "red";
+    }
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+
+      currentQuestion++;
+
+      if (currentQuestion < quizQuestions.length) {
+        loadQuestion();
+      } else {
+        question.innerHTML = `🎉 Quiz Finished!<br>Score: ${score}/${quizQuestions.length}`;
+        answers.innerHTML = "";
+        nextBtn.style.display = "none";
+        timer.style.display = "none";
+      }
+    }
+  }, 1000);
+}
 function loadQuestion() {
   const q = quizQuestions[currentQuestion];
   question.textContent = q.question;
   answers.innerHTML = "";
   nextBtn.style.display = "none";
-
+startTimer();
   q.answers.forEach((answer, index) => {
     const button = document.createElement("button");
     button.innerText = answer;
@@ -452,6 +486,7 @@ function loadQuestion() {
 }
 
 function checkAnswer(index) {
+  clearInterval(timerInterval);
   const buttons = answers.querySelectorAll(".btn");
 
   buttons.forEach((button, i) => {
