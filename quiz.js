@@ -440,7 +440,7 @@ function startTimer() {
 
   timeLeft = 15;
   timer.textContent = "⏱️ Time Left: " + timeLeft + "s";
-  timer.style.color = "#333";
+  timer.style.color = "white";
 
   timerInterval = setInterval(() => {
     timeLeft--;
