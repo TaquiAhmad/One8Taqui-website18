@@ -457,7 +457,7 @@ function checkAnswer(index) {
   buttons.forEach((button, i) => {
     button.disabled = true;
 
-    if (i === quizquestions[currentQuestion].correct) {
+    if (i === quizQuestions[currentQuestion].correct) {
       button.style.background = "green";
       button.style.color = "white";
     } else if (i === index) {
@@ -466,7 +466,7 @@ function checkAnswer(index) {
     }
   });
 
-  if (index === quizquestions[currentQuestion].correct) {
+  if (index === quizQuestions[currentQuestion].correct) {
     score++;
   }
 
