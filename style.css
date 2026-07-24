@@ -510,3 +510,27 @@ footer{
     line-height: 1.8;
     font-size: 18px;
     }
+.article p b {
+    color: #4CAF50;
+}
+.article h3 {
+    margin-top: 25px;
+    padding: 12px;
+    background: #162235;
+    border-left: 4px solid #FFD700;
+    border-radius: 8px;
+}
+
+.article p {
+    margin: 8px 0 20px;
+    font-size: 17px;
+    line-height: 1.7;
+    }
+.article img {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
