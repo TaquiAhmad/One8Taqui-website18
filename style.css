@@ -484,3 +484,29 @@ footer{
   text-align: center;
   margin: 15px 0;
 }
+.article {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.article img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.article h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.article h3 {
+    margin-top: 20px;
+    color: #ffd54f;
+}
+
+.article p {
+    line-height: 1.8;
+    font-size: 18px;
+    }
