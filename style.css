@@ -534,3 +534,21 @@ footer{
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
+.article-buttons {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.article-buttons .btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-buttons .btn:hover {
+    background: #FFC107;
+}
